@@ -11,7 +11,7 @@
 using namespace std;
 class distance{
     private:
-        unsigned int feet;
+        int feet;
     public:
         distance(){}
         distance(int x){
@@ -20,7 +20,8 @@ class distance{
         int getFeet(){return feet;}
         distance operator ++(int){
             distance temp;
-            temp.feet+=1;
+            temp.feet=feet;
+            temp.feet++;
             return temp;
         }
 };
